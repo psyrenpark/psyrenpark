@@ -1,4 +1,4 @@
-## psyren park
+## Psyren Park
 
 **English** · [한국어](./README.ko.md)
 
