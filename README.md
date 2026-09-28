@@ -5,8 +5,10 @@
 Backend & cloud engineer · 11 years in development · 9 years at SV
 TypeScript · Node.js · NestJS · PostgreSQL · AWS (Lambda, CDK) · React / React Native
 
-I lead server development and AWS operations for consumer apps in a three-person team,
-and I work on what comes after a feature ships: transaction correctness, operating cost, and handover.
+I lead server development and AWS operations for consumer apps in a three-person team:
+serverless infrastructure I designed with CDK, live in four countries (KR, ID, PH, BR),
+100M–350M Lambda invocations a month on the Korean service alone.
+I work on what comes after a feature ships: transaction correctness, operating cost, and handover.
 
 ### Services I work on
 
@@ -15,7 +17,11 @@ and I work on what comes after a feature ships: transaction correctness, operati
 | **SalesVook** — commerce app | Server & AWS lead (2023–). Separated duplicate-request handling so the original transaction is preserved | Google Play 100K+ |
 | **SuperLozzi** — global app-tech platform | Server & AWS lead (2021–). Multi-account, multi-region serverless operations; iOS app in React Native | Google Play 1M+ (KR) · 1M+ (global) |
 | **Ultra AppLock** | Built multilingual, admin and scheduled-push features (2020); now maintain operations | Google Play 10M+ |
-| **SuperVank** — finance reward app | Backend & infrastructure (2018–2019): near-real-time stock sync, anti-macro, admin CMS | — |
+| **SuperVank** — finance reward app | Backend & infrastructure (2018–2020): near-real-time stock sync, anti-macro, admin CMS | — |
+
+As client project lead (2021–2022):
+- **Live broadcast quiz for a global game publisher** — AWS IoT (MQTT), 85K participants, up to 72K answering each question, 8 languages.
+- **Pop-up store reservation system for a luxury brand** — rebuilt an over-booking system on Aurora PostgreSQL; 99.99% success across 12 load-test scenarios.
 
 Also: an AI training/inference data pipeline for a public-sector research project — replaced an intermediate
 JSONL step with direct Arrow generation, fixed the validation contract, and handed it over to researchers.
@@ -24,13 +30,21 @@ JSONL step with direct Arrow generation, fixed the validation contract, and hand
 
 - [Preserving the original transaction under duplicate requests](https://blog.psyrenpark.com/work/reliable-transactions/)
 - [From ML training data generation to researcher handover](https://blog.psyrenpark.com/work/data-workflow/)
-- [Breaking down an AWS bill — 18.3% lower on the same account, and what that does and does not prove](https://blog.psyrenpark.com/notes/aws-cost-analysis/)
+- [Breaking down an AWS bill — monthly spend 18.3% lower on the same account](https://blog.psyrenpark.com/notes/aws-cost-analysis/)
 - [Separating authentication from per-service access](https://blog.psyrenpark.com/notes/service-access-boundaries/)
 
 ### Working with AI
 
 - [On-device LLM summarization in a mobile app](https://blog.psyrenpark.com/work/on-device-summary/)
 - [How I use AI tools — implementation and review, with design decisions and validation kept on my side](https://blog.psyrenpark.com/notes/ai-assisted-engineering/)
+
+### Open source
+
+7 of 19 external pull requests merged — fixes for bugs I hit at work:
+[OpenNext AWS edge bundle path](https://github.com/opennextjs/opennextjs-aws/pull/926) ·
+[serverless-express](https://github.com/CodeGenieApp/serverless-express/pull/375) ·
+[nestjs-i18n docs](https://github.com/toonvanstrijp/nestjs-i18n/pull/625) ·
+[react-native-admob-native-ads](https://github.com/ammarahm-ed/react-native-admob-native-ads/pull/267) and others.
 
 Production code is private; the articles describe design decisions and validation scope.
 
