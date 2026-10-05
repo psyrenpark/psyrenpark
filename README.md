@@ -1,51 +1,51 @@
 ## Psyren Park
 
-**English** · [한국어](./README.ko.md)
+**English** · [한국어](README.ko.md)
 
-Backend & cloud engineer · 11 years in development · 9 years at SV
-TypeScript · Node.js · NestJS · PostgreSQL · AWS (Lambda, CDK) · React / React Native
+**Backend & Cloud Engineer · Customer Solutions · Applied AI**
 
-I lead server development and AWS operations for consumer apps in a three-person team:
-serverless infrastructure I designed with CDK, live in four countries (KR, ID, PH, BR),
-100M–350M Lambda invocations a month on the Korean service alone.
-I work on what comes after a feature ships: transaction correctness, operating cost, and handover.
+11 years in development. At SV, I lead server development and AWS operations in a three-person team. I turn customer and operational requirements into systems, then work through implementation, rollout, training, and handover.
 
-### Services I work on
+TypeScript · Node.js · NestJS · PostgreSQL · AWS CDK / Lambda · Next.js · React Native / Expo · Python
 
-| Service | What I do | Public store listing |
-|---|---|---|
-| **SalesVook** — commerce app | Server & AWS lead (2023–). Separated duplicate-request handling so the original transaction is preserved | Google Play 100K+ |
-| **SuperLozzi** — global app-tech platform | Server & AWS lead (2021–). Multi-account, multi-region serverless operations; iOS app in React Native | Google Play 1M+ (KR) · 1M+ (global) |
-| **Ultra AppLock** | Built multilingual, admin and scheduled-push features (2020); now maintain operations | Google Play 10M+ |
-| **SuperVank** — finance reward app | Backend & infrastructure (2018–2020): near-real-time stock sync, anti-macro, admin CMS | — |
+### AI implementation and workplace adoption
 
-As client project lead (2021–2022):
-- **Live broadcast quiz for a global game publisher** — AWS IoT (MQTT), 85K participants, up to 72K answering each question, 8 languages.
-- **Pop-up store reservation system for a luxury brand** — rebuilt an over-booking system on Aurora PostgreSQL; 99.99% success across 12 load-test scenarios.
+- **Memo — on-device summarization:** shipped an LLM feature using llama.rn, Gemma, and TinyLlama. Built model selection, downloads, and fallback behavior. Evaluated output format and factuality separately in 252 Mac-based runs; this is development evaluation, not a product-wide accuracy claim.
+- **Customer-support records at SV:** proposed and taught a manual CLOVA transcription and summarization workflow. When a recognition error changed the meaning of a summary, added human correction to the procedure. Trained two staff members and received feedback that the workflow remained in use.
+- **SalesVook operations:** built a sales-state-based chain to open the next selling wave from pre-registered configuration. Taught staff and managers how to use it, addressed operational exceptions, and supported adoption of scheduled Hermes / Codex checks and Telegram reporting.
+- **Public-sector AI environment — independent client project:** replaced an intermediate training-data JSONL step with direct Arrow generation while preserving the operational data path. Validated data and API contracts and handed over a Windows-based workflow that researchers reported using.
+- **Personal tools:** multi-account lodging change notifications, AI-assisted real-device QA, and GPU generation workflows with human review and failure recovery.
 
-Also: an AI training/inference data pipeline for a public-sector research project — replaced an intermediate
-JSONL step with direct Arrow generation, fixed the validation contract, and handed it over to researchers.
+### Customer delivery and production engineering
 
-### Case studies (articles in Korean)
+- **Cloud operations:** prepared infrastructure for seven markets and operated services in four countries (KR, ID, PH, BR). Organized deployment into nine country/app CDK stacks. The Korean shared AWS account recorded roughly 100M–350M Lambda invocations per month across multiple services (July 2025–August 2026).
+- **Client delivery:** supported AWS migration, troubleshooting, and environment cleanup for 11 clients. Built a luxury-brand reservation system from requirements and load testing through launch, an operations contract, and handover.
+- **Live broadcast quiz:** led backend/infrastructure delivery for a global game publisher; approximately 85K cumulative participants in the first event, eight languages, and AWS IoT / MQTT.
+- **Reusable foundations:** developed and maintained 12 npm packages for authentication, storage, APIs, and cloud infrastructure, with documentation and developer training.
 
-- [Preserving the original transaction under duplicate requests](https://blog.psyrenpark.com/work/reliable-transactions/)
-- [From ML training data generation to researcher handover](https://blog.psyrenpark.com/work/data-workflow/)
-- [Breaking down an AWS bill — monthly spend 18.3% lower on the same account](https://blog.psyrenpark.com/notes/aws-cost-analysis/)
-- [Separating authentication from per-service access](https://blog.psyrenpark.com/notes/service-access-boundaries/)
+### Products and tools
 
-### Working with AI
+- **SalesVook:** commerce app; mobile, delivery/payment APIs, operations tooling, and transaction correctness.
+- **SuperLozzi:** rewards app; Korean/global iPhone releases, backend, unified authentication, and cloud operations. **SuperVank:** stock-data collection and reward-state processing. **Ultra AppLock:** selected feature development and subsequent product maintenance.
+- **Memo · Lotto · Vote · HostAuto:** personal products built with Next.js and Expo. **Base Kernel:** shared authentication and service permissions. **DataBridge:** data collection and delivery contracts. **Device Farm:** Android/iOS device QA. **Local Asset Studio:** GPU job execution and review.
 
-- [On-device LLM summarization in a mobile app](https://blog.psyrenpark.com/work/on-device-summary/)
-- [How I use AI tools — implementation and review, with design decisions and validation kept on my side](https://blog.psyrenpark.com/notes/ai-assisted-engineering/)
+### Case studies
+
+- [On-device LLM summarization](https://blog.psyrenpark.com/work/on-device-summary/)
+- [AI-assisted engineering and verification](https://blog.psyrenpark.com/notes/ai-assisted-engineering/)
+- [Training data generation and researcher handover](https://blog.psyrenpark.com/work/data-workflow/)
+- [Preserving transactions under duplicate requests](https://blog.psyrenpark.com/work/reliable-transactions/)
+- [AWS cost analysis](https://blog.psyrenpark.com/notes/aws-cost-analysis/) — same-account monthly billing decreased 18.3% from July to August 2026, with usage and backup changes among the contributing factors.
+- [Authentication and service access boundaries](https://blog.psyrenpark.com/notes/service-access-boundaries/)
 
 ### Open source
 
-7 of 19 external pull requests merged — fixes for bugs I hit at work:
-[OpenNext AWS edge bundle path](https://github.com/opennextjs/opennextjs-aws/pull/926) ·
+Fixes for issues encountered in implementation and operations:
+[OpenNext AWS](https://github.com/opennextjs/opennextjs-aws/pull/926) ·
 [serverless-express](https://github.com/CodeGenieApp/serverless-express/pull/375) ·
-[nestjs-i18n docs](https://github.com/toonvanstrijp/nestjs-i18n/pull/625) ·
-[react-native-admob-native-ads](https://github.com/ammarahm-ed/react-native-admob-native-ads/pull/267) and others.
+[nestjs-i18n](https://github.com/toonvanstrijp/nestjs-i18n/pull/625) ·
+[react-native-admob-native-ads](https://github.com/ammarahm-ed/react-native-admob-native-ads/pull/267).
 
-Production code is private; the articles describe design decisions and validation scope.
+Production code is private. The articles explain design choices, responsibilities, and validation scope.
 
-**Blog** [blog.psyrenpark.com](https://blog.psyrenpark.com) · **Resume (English summary)** [blog.psyrenpark.com/resume](https://blog.psyrenpark.com/resume/) · **LinkedIn** [in/psyrenpark](https://www.linkedin.com/in/psyrenpark/)
+**Blog:** [blog.psyrenpark.com](https://blog.psyrenpark.com) · **LinkedIn:** [psyrenpark](https://www.linkedin.com/in/psyrenpark/)
